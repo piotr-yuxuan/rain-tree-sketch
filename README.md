@@ -13,6 +13,7 @@ Lilypond code questions
 =======================
 
 * This piece makes innovative use of all three pedals of the piano. I've tried to play a bit with [this snippet](http://lilypond.org/doc/v2.19/Documentation/snippets/keyboards#keyboards-changing-the-text-for-sustain-markings) but I'm not convinced by what I've got. I especially don't know how to symbolize half pedal to the best of my knowledge. Moreover, I'd like to change « simile » for an arrow →.
+ * Partially answered, I have to test function I've been sent.
 * How to show some notes of a chord are played with the left hand and some others are played with the right one? The score notation is clear.
 * What is the best way to get bar numbers in an unmetered music score? I feel the way I've done it is just an expedient.
 
