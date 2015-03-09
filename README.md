@@ -7,10 +7,10 @@ The reason I've set up this public repository is four-fold:
  * Basically, Lilypond is an awesome software with endless possibilities thanks to Lisp-based music-specific language. It's a great opportunity for an in-depth understanding of Lilypond to let it face up contemporary music which uses very peculiar « glyph grammar ».
  * Finally, in a personnal way, this piece will be part of my graduation performance. I've bought an original score but I'd rather prefer music I play to keep being free :-)
 
-About Licensing and Copyright Concerns
-======================================
+Help and contribution are the most welcomed!
+============================================
 
-I sure don't want to infringe any copyright. I hereby merely share `*.ly` files within this repository. This file is source code. I chose to share it with anyone. It can be compiled to a `*.pdf` file which is public property according to the free license I've chosen.
+Please just feel free to issue a pull request. I will review any help with great consideration. First of all: thank you for reading this and being willing to help :-)
 
 About Toru Takemitsu
 ====================
@@ -20,3 +20,8 @@ One of the most influential Japanese composers in the late twentieth century, To
 The origin of the Rain Tree Sketches can be traced back to Takemitsu's percussion trio Rain Tree (1981), which was based on a description of a rain-tree in Kenzaburo Oe's short novel "Clever Rain Tree" (1980). Rain Tree is used as a metaphor of water circulating in the cosmos, and Takemitsu employed Messiaen's modes of limited transposition in order to construct the pitch collections evocative of cosmic imagery. Takemitsu's goal as an artist was to expand the possibilities of music, and to express himself through creation of a universal language. This lecture/recital will demonstrate how this goal is realized in the Rain Tree Sketches.
 
 — Tomoko Isshiki, University of Houston, The Cosmic Metaphor of Toru Takemitsu's "Rain Tree Sketches"
+
+About Licensing and Copyright Concerns
+======================================
+
+I sure don't want to infringe any copyright. I hereby merely share `*.ly` files within this repository. This file is source code. I chose to share it with anyone. It can be compiled to a `*.pdf` file which is public property according to the free license I've chosen.
