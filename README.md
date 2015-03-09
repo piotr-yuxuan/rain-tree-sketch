@@ -12,7 +12,7 @@ The reason I've set up this public repository is four-fold:
 Help and contribution are the most welcomed!
 ============================================
 
-Please just feel free to issue a pull request. I will review any help with great consideration. First of all: thank you for reading this and being willing to help :-)
+Please just feel free to issue a pull request or send me a message. I will review any help with great consideration. First of all: thank you for reading this and being willing to help :-)
 
 About Toru Takemitsu
 ====================
