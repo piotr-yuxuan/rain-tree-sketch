@@ -1,3 +1,5 @@
+![leaf picture][image.jpg]
+
 武満徹の雨の樹素描
 ==================
 
@@ -14,6 +16,8 @@ Please just feel free to issue a pull request. I will review any help with great
 
 About Toru Takemitsu
 ====================
+
+![Rain tree sketch][footer.jpg]
 
 One of the most influential Japanese composers in the late twentieth century, Toru Takemitsu (1930-96) created a unique musical language by integrating the disparate musical traditions of East and West. This lecture/recital will investigate the metaphor behind Takemitsu's last two solo piano pieces, Rain Tree Sketch (1982) and Rain Tree Sketch II (1992). The lecture explores the interaction of ideas between Takemitsu and his novelist friend Kenzaburo Oe, the Nobel Prize winning author whom inspired Takemitsu to compose the Rain Tree series. An analytic overview of the piano pieces will also be given which indicates the influence of Olivier Messiaen. A performance of the complete Rain Tree Sketcheswill follow the lecture.
 
