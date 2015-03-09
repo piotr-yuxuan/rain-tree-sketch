@@ -40,6 +40,7 @@ right = \relative do' {
 
 left = \relative do {
   \clef bass
+  \voiceOne
   <do fa>4
   <do sol'>8
   <do fa>8
