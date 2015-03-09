@@ -9,6 +9,13 @@ The reason I've set up this public repository is four-fold:
  * Basically, Lilypond is an awesome software with endless possibilities thanks to Lisp-based music-specific language. It's a great opportunity for an in-depth understanding of Lilypond to let it face up contemporary music which uses very peculiar « glyph grammar ».
  * Finally, in a personnal way, this piece will be part of my graduation performance. I've bought an original score but I'd rather prefer music I play to keep being free :-)
 
+Lilypond code questions
+=======================
+
+* This piece makes innovative use of all three pedals of the piano. I've tried to play a bit with [this snippet](http://lilypond.org/doc/v2.19/Documentation/snippets/keyboards#keyboards-changing-the-text-for-sustain-markings) but I'm not convinced by what I've got. I especially don't know how to symbolize half pedal to the best of my knowledge. Moreover, I'd like to change « simile » for an arrow →.
+* How to show some notes of a chord are played with the left hand and some others are played with the right one? The score notation is clear.
+* What is the best way to get bar numbers in an unmetered music score? I feel the way I've done it is just an expedient.
+
 Help and contribution are the most welcomed!
 ============================================
 
