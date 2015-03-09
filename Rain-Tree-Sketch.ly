@@ -31,6 +31,8 @@
   }
 }
 
+% TODO: put LH, RH and bracket hand signs.
+
 % There is three kind of accents: \rtoe, \ltoe and -> to keep the glyph similar.
 % I want to print bar number.
 
@@ -156,7 +158,7 @@ right = \relative do'' {
 
   \bar "|" \set Score.currentBarNumber = #21
 
-  <fad sol si>16[\(
+  <fad sol si>16_[\(
   \set stemLeftBeamCount = #2
   \set stemRightBeamCount = #1
   <lab do>
@@ -169,6 +171,80 @@ right = \relative do'' {
   \set stemLeftBeamCount = #1
   \set stemRightBeamCount = #2
   <fa! dod> <si mi>\)]
+
+  \bar "|" \set Score.currentBarNumber = #22
+
+  <fa'! lab>8._[ <mi! la!>8\rtoe-\markup { \center-align \small "poco rall." } <si lab'>16]-> \bar "!"
+  <do sol'>4.\laissezVibrer
+
+  \bar "|" \set Score.currentBarNumber = #23
+
+  r8. r8 sol, ~
+
+  \bar "|" \set Score.currentBarNumber = #24
+
+  <dob, mib sol lab>8.[ ~ <dob mib sol lab>16 <fa la! lab>8 <do! fad si re>16]
+
+  \bar "|" \set Score.currentBarNumber = #25
+
+  <<
+    { <la re mib lab>4 } \\ {
+      \times 2/3 {
+        r16
+        \set stemLeftBeamCount = #2
+        \set stemRightBeamCount = #2
+        fad'[
+        \set stemLeftBeamCount = #2
+        \set stemRightBeamCount = #1
+        fa'!
+      } \times 2/3 {
+        \set stemLeftBeamCount = #1
+        \set stemRightBeamCount = #2
+        si mib sol]
+      }
+      \ottava #1
+      \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
+      \times 3/4 { sib16[ <fad do'> <la re> <dod mi>]\laissezVibrer }
+      \ottava #0
+    }
+  >>
+
+  \bar "|" \set Score.currentBarNumber = #26
+
+  r16 r16 r16
+
+  \bar "|" \set Score.currentBarNumber = #27
+
+  <<
+    \new Staff \with {
+      \remove "Time_signature_engraver"
+      alignAboveContext = #"right"
+    } {
+      r8. <la, mi'>16[\laissezVibrer <si red fad>8] ~ <si red fad>8.\laissezVibrer
+    }
+    \new Staff \with {
+      \remove "Time_signature_engraver"
+      alignAboveContext = #"right"
+    } {
+      r8. <fa, dod'>16[\laissezVibrer sol8] ~ sol8.
+    }
+    {
+      <<
+        {
+          \stemUp s4.. sol'''16^[ sib,]\laissezVibrer
+        } {
+          \stemDown
+          <si,,, dod mi>16[ <re mib lab>8] ~ <re mib lab>8\laissezVibrer
+          \times 2/3 { la'!16[ lab' mi] }
+          \override Stem.details.beamed-lengths = #'(2)
+          do8
+          \stemNeutral
+        }
+      >>
+    }
+  >>
+
+  \bar "|" \set Score.currentBarNumber = #28
 }
 
 %<< {  } \\ {  } >>
@@ -249,6 +325,65 @@ left = \relative do {
   <mib, la>8.[-> <fad do'!>8]
   <mib la fad'>4.
   << { <re fa'!>8[_( <fa si!>8]\ltoe) } \\ { sol4 } >>
+  <mib la>16^[\(
+  \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  <fad fa'!>
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  <do' fad>
+  \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  <mib si'>
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  la! re\)]
+  %
+  fad,,16[\(
+  \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  do'
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  mi!
+  \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  mib'!
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  sib' fa']\)->
+  r16 la,,,\laissezVibrer\>[ mib'\laissezVibrer \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  sol\laissezVibrer
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  fad'\laissezVibrer dod'\laissezVibrer\!]
+  r8. r8 \clef bass r16
+  <<
+    {
+      s4 <do,,, fad>4\laissezVibrer
+      \set stemLeftBeamCount = #0
+      \set stemRightBeamCount = #0
+      r16[
+      % TODO shape beautiful slur.
+      %{\shape #'(
+                 (0 . -6.8)
+                 (0 . -7)
+                 (0 . -6)
+                 (0 . -1.5)
+                 (0 . -1)
+                 (0 . 0)
+                 ) PhrasingSlur%}
+      mib\(\< la dod]\!
+      \clef treble
+      do'![\> sol' si!]\laissezVibrer\)\!
+    } \\
+    {
+      \stemUp fa,,,,16 ~ fa8[ fa16] ~ fa8[ fa8] ~
+      \stemDown fa4\laissezVibrer \stemNeutral
+    }
+  >>
+  r16 r16 r16 \clef bass
 }
 
 %<< {  } \\ {  } >>
@@ -259,7 +394,15 @@ dynamics = {
   \tempo \markup { \small \note #"8" #1 = 2 \note #"16" #1 = 100 ～ 108 (Tempo II)}
   s4.-\markup{ "in" \dynamic pp } s16 s4 s4 s4 s4 s4 s4. s4..\p s8. s8
   \tempo \markup { \small Tempo I}
-  s4\pp
+  s4\pp s2 s s s s4..
+  \tempo \markup { \small Tempo II}
+  s4.-\markup { "poco" \dynamic mf}\> s4.\!\p
+  \tempo \markup { \small Tempo I}
+  s2 s2 s4
+  \tempo \markup { \small Tempo II}
+  s4..
+  \tempo \markup { \small Tempo I} % TODO this tempo must be put nearer to r16
+  s8. s4\mf
 }
 
 \markuplist {
@@ -293,6 +436,86 @@ dynamics = {
   }
   \vspace #1
 }
+
+sustainPedalHalfOn = {
+  \override Staff.SustainPedal #'stencil =
+  #(lambda (grob) (grob-interpret-markup grob
+                    (markup #:raise 0.1 "½" #:hspace -1 #:musicglyph "pedal.Ped")))
+  \override Staff.PianoPedalBracket #'shorten-pair = #'(0.0 . 2.5)
+}
+
+
+pedalSim =
+\once \override PianoPedalBracket #'stencil =
+#(lambda (grob)
+   (let* (;; have we been split?
+           (orig (ly:grob-original grob))
+           ;; if yes, get the split pieces (our siblings)
+           (siblings (if (ly:grob? orig)
+                         (ly:spanner-broken-into orig)
+                         '())))
+     ;; Modify the unbroken grob-stencil or the first part of the broken
+     ;; grob-stencil.
+     (if (or (null? siblings)
+             (and (>= (length siblings) 2)
+                  (eq? (car siblings) grob)))
+         (let* (;; Get the default-stencil and its x-dimension and x-length.
+                 (stil (ly:piano-pedal-bracket::print grob))
+                 (stil-x-extent (ly:stencil-extent stil X))
+                 (stil-x-length (interval-length stil-x-extent))
+                 ;; Create a stencil to be added to the default-stencil.
+                 ;; Gets its x-dimension and x-length.
+                 (sim-stil
+                  (grob-interpret-markup grob
+                    (markup #:fontsize -1 #:hspace 1 #:italic "sim.")))
+                 (sim-stil-x-extent (ly:stencil-extent sim-stil X))
+                 (sim-stil-x-length (interval-length sim-stil-x-extent))
+                 (thickness (max (layout-line-thickness grob) 0.1))
+                 ;; The value to shorten the default-stencil from the right side.
+                 ;; 0.8 will shorten about 80%.
+                 ;; Hard-coded, could be turned into a music-function.
+                 (amount 0.8))
+
+           ;; Print a warning if the length of the default-stencil would not
+           ;; warrant a sufficient output.
+           (if (> sim-stil-x-length stil-x-length)
+               (ly:warning "PianoPedalBracket is too short"))
+
+           ;; Shorten the default-stencil.
+           (ly:grob-set-property!
+            grob
+            'shorten-pair
+            (cons 0 (* amount stil-x-length)))
+
+           ;; Calculate the final stencil.
+           (let* (;; Get the shortened (default-)stencil
+                   ;; and its y-dimension.
+                   (shortened-stil (ly:piano-pedal-bracket::print grob))
+                   (shortened-stil-y-ext (ly:stencil-extent shortened-stil Y))
+                   ;; Modify the sim-stil to gain a little gap to the left and
+                   ;; enlarge it downwards a little (otherwise the stencil-whiteout
+                   ;; will not work sufficient.
+                   (new-sim-stil
+                    (ly:make-stencil
+                     (ly:stencil-expr sim-stil)
+                     (interval-widen sim-stil-x-extent (* 2 thickness))
+                     (cons (- (car shortened-stil-y-ext) thickness)
+                       (cdr shortened-stil-y-ext)))))
+
+             (ly:stencil-add
+              shortened-stil
+              (ly:stencil-translate-axis
+               (stencil-whiteout new-sim-stil)
+               (* (- 1 amount) (- stil-x-length sim-stil-x-length))
+               X))))
+         ;; TODO:
+         ;; Is there any need to return #f explicitly?
+         ;; Deleting it seems to make no difference.
+         ;#f
+         )))
+
+
+%right = \relative do' { do4\sustainOn do\sustainOff\sustainOn do\sustainPedalHalfOn do\pedalSim do do do do }
 
 \score {
   \new PianoStaff \with {
