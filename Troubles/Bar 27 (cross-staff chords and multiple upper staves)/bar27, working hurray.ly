@@ -25,7 +25,7 @@ rhb = \relative {
   \voiceTwo
   \omit TupletBracket
   \once \override Beam.positions = #'(-4 . -4)
-  \tuplet 3/2 { la''16^\accent[ lab' mi~ } <la, mi' lab>8]
+  \tuplet 3/2 { la''!16^\accent[ lab' mi~ } <la, mi' lab>8]
 }
 
 rhc = \relative {
