@@ -25,7 +25,7 @@ rhb = \relative {
   \voiceTwo
   \omit TupletBracket
   \once \override Beam.positions = #'(-4 . -4)
-  \tuplet 3/2 { la''!16^\accent[ lab' mi~ } <la, mi' lab>8]
+  \tuplet 3/2 { la''!16^\accent[ lab' mi~ } <la, mi' \tweak Accidental.stencil ##f lab>8]
 }
 
 rhc = \relative {
@@ -83,12 +83,9 @@ left = \new Staff \relative do' {
   \clef bass
   <re, lab'>16[ <fa si>8] ~ q8
   \clef treble
+  \set subdivideBeams = ##t
   si'!16[\laissezVibrer
-  \set stemLeftBeamCount = #2
-  \set stemRightBeamCount = #1
   fa' ~
-  \set stemLeftBeamCount = #1
-  \set stemRightBeamCount = #2
   fa dod'] \laissezVibrer
 }
 
