@@ -83,7 +83,13 @@ left = \new Staff \relative do' {
   \clef bass
   <re, lab'>16[ <fa si>8] ~ q8
   \clef treble
-  si'!16[\laissezVibrer fa' ~ fa dod'] \laissezVibrer
+  si'!16[\laissezVibrer
+  \set stemLeftBeamCount = #2
+  \set stemRightBeamCount = #1
+  fa' ~
+  \set stemLeftBeamCount = #1
+  \set stemRightBeamCount = #2
+  fa dod'] \laissezVibrer
 }
 
 \score {
