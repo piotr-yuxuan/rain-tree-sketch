@@ -279,6 +279,32 @@ rightThree = \relative do''' {
   
   % bar n° 33
   
+  r8
+  \times 2/3 { la'!16^[ lab'
+                  \set stemLeftBeamCount = #2
+                  \set stemRightBeamCount = #1
+                  mi }
+  \times 2/3 {
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    fa' si,! sib'] }
+  \times 2/3 { la,,16^[ lab'
+                  \set stemLeftBeamCount = #2
+                  \set stemRightBeamCount = #1
+                  mi }
+  \times 2/3 {
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    fa' si, sib'] }
+  \times 2/3 { la,,16^[ lab'
+                  \set stemLeftBeamCount = #2
+                  \set stemRightBeamCount = #1
+                  mi }
+  \times 2/3 {
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    fa' si, sib'] }
+  
   % bar n° 34
 }
 

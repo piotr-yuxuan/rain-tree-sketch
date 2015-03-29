@@ -46,6 +46,7 @@ right = {
 
 \include "left.ly"
 left = {
+  \voiceOne
   %\leftZero
   %\leftOne
   %\leftTwo

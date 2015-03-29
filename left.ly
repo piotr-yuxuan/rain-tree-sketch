@@ -251,6 +251,39 @@ leftThree = \relative do {
     \stemNeutral
   }
   \autoBeamOn
+
+  % bar n° 33
+
+  <<
+    {
+      <dod dod, dod,>16
+    } {
+      r8 \times 2/3 { mi''16[ fa, si }
+      \times 2/3 {
+        la!
+        \change Staff = "right"
+        lab']
+        \change Staff = "left"
+        mi[
+      }
+      \times 2/3 { fa, si la }
+      \times 2/3 {
+        \change Staff = "right"
+        lab']
+        \change Staff = "left"
+        mi[ fa,
+      }
+      \times 2/3 {
+        si la
+        \change Staff = "right"
+        lab']
+        \change Staff = "left"
+      }
+      \times 2/3 {
+        mi[ fa si]
+      }
+    }
+  >>
 }
 
 %<< {  } \\ {  } >>
